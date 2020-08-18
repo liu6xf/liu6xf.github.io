@@ -181,6 +181,487 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/04/20200604-R%20visualization/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xiaofeng Liu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/04/20200604-R%20visualization/" class="post-title-link" itemprop="url">20200604-R visualization</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-06-04 11:30:34" itemprop="dateCreated datePublished" datetime="2020-06-04T11:30:34+08:00">2020-06-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-04-12 18:45:26" itemprop="dateModified" datetime="2020-04-12T18:45:26+08:00">2020-04-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="学习资料"><a href="#学习资料" class="headerlink" title="学习资料"></a>学习资料</h1><ol>
+<li>B站视频“B站GEE视频资料”：<a href="https://www.bilibili.com/video/av48083555/（本地文件夹：B站GEE视频资料）" target="_blank" rel="noopener">https://www.bilibili.com/video/av48083555/（本地文件夹：B站GEE视频资料）</a><br> YouTube学习视频：<a href="https://www.youtube.com/playlist?list=PLWw80tqUZ5J9_3E_9C_bK8zt0mGHfvOrj" target="_blank" rel="noopener">https://www.youtube.com/playlist?list=PLWw80tqUZ5J9_3E_9C_bK8zt0mGHfvOrj</a></li>
+<li>知乎专栏“GEE开发”：<a href="https://zhuanlan.zhihu.com/c_123993183" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/c_123993183</a></li>
+<li>官方帮助文档：<a href="https://developers.google.com/earth-engine/。" target="_blank" rel="noopener">https://developers.google.com/earth-engine/。</a><br> 官方培训资料：<a href="https://developers.google.com/earth-engine/edu" target="_blank" rel="noopener">https://developers.google.com/earth-engine/edu</a></li>
+<li>GEE 开发者大会：<a href="https://events.withgoogle.com/google-earth-engine-user-summit-2017/#content" target="_blank" rel="noopener">https://events.withgoogle.com/google-earth-engine-user-summit-2017/#content</a> </li>
+<li>GEE 开发者论坛：<a href="https://groups.google.com/forum/#!forum/google-earth-engine-developers" target="_blank" rel="noopener">https://groups.google.com/forum/#!forum/google-earth-engine-developers</a> </li>
+</ol>
+<h1 id="GEE介绍"><a href="#GEE介绍" class="headerlink" title="GEE介绍"></a>GEE介绍</h1><p>Google Earth Engine是一个专门处理卫星图像和其他地球观测数据云端运算平台，其能够存取全球尺度的卫星图像等地球观测数据，并对数据进行在线处理和可视化。</p>
+<p>官方网址：<a href="https://earthengine.google.com/" target="_blank" rel="noopener">https://earthengine.google.com/</a></p>
+<p>GEE发布论文：Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., &amp; Moore, R. (2017). Google Earth Engine: Planetary-scale geospatial analysis for everyone. Remote sensing of Environment, 202, 18-27. (<a href="https://www.sciencedirect.com/science/article/pii/S0034425717302900" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/pii/S0034425717302900</a>)</p>
+<p>GEE组成：  </p>
+<ul>
+<li>数据集：包含上百种全球遥感影像数据、地球物理数据、气候/天气数据和人口统计数据等。其中影像数据包括Landset、Sentinel、MODIS以及其他高分影像；地球物理数据包括地形数据、地表覆盖数据、耕地数据和地表温度数据等；气候/天气数据包括大气数据、天气数据和气候数据等；人口统计数据包括世界流行音乐和疟疾等人类数据。<ul>
+<li>数据检索：<a href="https://developers.google.com/earth-engine/datasets/" target="_blank" rel="noopener">https://developers.google.com/earth-engine/datasets/</a></li>
+<li>研究案例：<a href="https://earthengine.google.com/case_studies/" target="_blank" rel="noopener">https://earthengine.google.com/case_studies/</a></li>
+</ul>
+</li>
+<li>计算能力：依靠谷歌强大的并行计算集群</li>
+<li>APIs: GEE不仅提供在线的JavaScript API，同时也提供了离线的 Python API。通过这些API可以快速的建立基于Google Earth Engine 以及 Google云的Web服务。（推荐使用JS，可以更好的进行可视化）<a href="https://developers.google.com/earth-engine/api_docs" target="_blank" rel="noopener">https://developers.google.com/earth-engine/api_docs</a><ul>
+<li>JS的API文档：<a href="https://developers.google.com/earth-engine/getstarted" target="_blank" rel="noopener">https://developers.google.com/earth-engine/getstarted</a></li>
+<li>Python API地址：<a href="https://github.com/google/earthengine-api" target="_blank" rel="noopener">https://github.com/google/earthengine-api</a> </li>
+</ul>
+</li>
+<li>代码编辑器：一个使用Javascript API进行复杂空间分析的快速原型设计和可视化的IDE。 <a href="https://developers.google.com/earth-engine/playground" target="_blank" rel="noopener">https://developers.google.com/earth-engine/playground</a></li>
+</ul>
+<h1 id="GEE-入门"><a href="#GEE-入门" class="headerlink" title="GEE 入门"></a>GEE 入门</h1><h2 id="工作空间和界面"><a href="#工作空间和界面" class="headerlink" title="工作空间和界面"></a>工作空间和界面</h2><p>GUI界面：<a href="https://explorer.earthengine.google.com/#workspace，登陆后可用。" target="_blank" rel="noopener">https://explorer.earthengine.google.com/#workspace，登陆后可用。</a><br>代码界面：<a href="https://code.earthengine.google.com，这个是主要的工作界面，代码编写、结果输出及可视化显示都在这个界面。工作空间左侧Scripts（脚本）里面提供了许多共享的代码，另外" target="_blank" rel="noopener">https://code.earthengine.google.com，这个是主要的工作界面，代码编写、结果输出及可视化显示都在这个界面。工作空间左侧Scripts（脚本）里面提供了许多共享的代码，另外</a> Google Earth Engine API帮助文档也提供了许多示例代码，可以运行这些示例代码入门学习。</p>
+<h2 id="常用功能"><a href="#常用功能" class="headerlink" title="常用功能"></a>常用功能</h2><p>Google Earth Engine提供对影像和影像集的处理以及要素和要素集的处理；提供对不同时间、空间、分辨率及波段的数据进行Reduce(综合)，提供对不同要素进行Jion(关联)；Google Earth Engine包含Array(数组)对象，提供 Charts(图表)输出以及Assets(资产)管理等等。</p>
+<h3 id="查看影像信息并加载影像"><a href="#查看影像信息并加载影像" class="headerlink" title="查看影像信息并加载影像"></a>查看影像信息并加载影像</h3><h3 id="裁剪影像保存到本地"><a href="#裁剪影像保存到本地" class="headerlink" title="裁剪影像保存到本地"></a>裁剪影像保存到本地</h3><p>按照给定的坐标范围对影像进行裁剪，执行代码后，在”Tasks”任务列表中会出现该任务，单击“运行”可以将裁剪影像保存到Assets(资产)列表或者Google云盘中，Google云盘中的数据可以下载到本地。</p>
+<p>数据导出到Assets(资产)列表中，Assets列表中的数据可以直接用于运算。</p>
+<h3 id="影像-影像集在线处理"><a href="#影像-影像集在线处理" class="headerlink" title="影像/影像集在线处理"></a>影像/影像集在线处理</h3><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>海洋GISer成长记. Google Earth Engine地理计算云平台介绍及入门. <a href="https://kuaibao.qq.com/s/20180613G20Q8100?refer=spider" target="_blank" rel="noopener">https://kuaibao.qq.com/s/20180613G20Q8100?refer=spider</a>, 2018-06-13.</p>
+<p>木辰. Google Earth Engine 随笔（一）·开篇. <a href="https://zhuanlan.zhihu.com/p/51486147" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/51486147</a>, 2018-12-06.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/06/20200406%20GEE%20tutorial/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xiaofeng Liu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/06/20200406%20GEE%20tutorial/" class="post-title-link" itemprop="url">20200406 GEE tutorial</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-06 17:20:46" itemprop="dateCreated datePublished" datetime="2020-04-06T17:20:46+08:00">2020-04-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-04-12 18:45:26" itemprop="dateModified" datetime="2020-04-12T18:45:26+08:00">2020-04-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="学习资料"><a href="#学习资料" class="headerlink" title="学习资料"></a>学习资料</h1><ol>
+<li>B站视频“B站GEE视频资料”：<a href="https://www.bilibili.com/video/av48083555/（本地文件夹：B站GEE视频资料）" target="_blank" rel="noopener">https://www.bilibili.com/video/av48083555/（本地文件夹：B站GEE视频资料）</a><br> YouTube学习视频：<a href="https://www.youtube.com/playlist?list=PLWw80tqUZ5J9_3E_9C_bK8zt0mGHfvOrj" target="_blank" rel="noopener">https://www.youtube.com/playlist?list=PLWw80tqUZ5J9_3E_9C_bK8zt0mGHfvOrj</a></li>
+<li>知乎专栏“GEE开发”：<a href="https://zhuanlan.zhihu.com/c_123993183" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/c_123993183</a></li>
+<li>官方帮助文档：<a href="https://developers.google.com/earth-engine/。" target="_blank" rel="noopener">https://developers.google.com/earth-engine/。</a><br> 官方培训资料：<a href="https://developers.google.com/earth-engine/edu" target="_blank" rel="noopener">https://developers.google.com/earth-engine/edu</a></li>
+<li>GEE 开发者大会：<a href="https://events.withgoogle.com/google-earth-engine-user-summit-2017/#content" target="_blank" rel="noopener">https://events.withgoogle.com/google-earth-engine-user-summit-2017/#content</a> </li>
+<li>GEE 开发者论坛：<a href="https://groups.google.com/forum/#!forum/google-earth-engine-developers" target="_blank" rel="noopener">https://groups.google.com/forum/#!forum/google-earth-engine-developers</a> </li>
+</ol>
+<h1 id="GEE介绍"><a href="#GEE介绍" class="headerlink" title="GEE介绍"></a>GEE介绍</h1><p>Google Earth Engine是一个专门处理卫星图像和其他地球观测数据云端运算平台，其能够存取全球尺度的卫星图像等地球观测数据，并对数据进行在线处理和可视化。</p>
+<p>官方网址：<a href="https://earthengine.google.com/" target="_blank" rel="noopener">https://earthengine.google.com/</a></p>
+<p>GEE发布论文：Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., &amp; Moore, R. (2017). Google Earth Engine: Planetary-scale geospatial analysis for everyone. Remote sensing of Environment, 202, 18-27. (<a href="https://www.sciencedirect.com/science/article/pii/S0034425717302900" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/pii/S0034425717302900</a>)</p>
+<p>GEE组成：  </p>
+<ul>
+<li>数据集：包含上百种全球遥感影像数据、地球物理数据、气候/天气数据和人口统计数据等。其中影像数据包括Landset、Sentinel、MODIS以及其他高分影像；地球物理数据包括地形数据、地表覆盖数据、耕地数据和地表温度数据等；气候/天气数据包括大气数据、天气数据和气候数据等；人口统计数据包括世界流行音乐和疟疾等人类数据。<ul>
+<li>数据检索：<a href="https://developers.google.com/earth-engine/datasets/" target="_blank" rel="noopener">https://developers.google.com/earth-engine/datasets/</a></li>
+<li>研究案例：<a href="https://earthengine.google.com/case_studies/" target="_blank" rel="noopener">https://earthengine.google.com/case_studies/</a></li>
+</ul>
+</li>
+<li>计算能力：依靠谷歌强大的并行计算集群</li>
+<li>APIs: GEE不仅提供在线的JavaScript API，同时也提供了离线的 Python API。通过这些API可以快速的建立基于Google Earth Engine 以及 Google云的Web服务。（推荐使用JS，可以更好的进行可视化）<a href="https://developers.google.com/earth-engine/api_docs" target="_blank" rel="noopener">https://developers.google.com/earth-engine/api_docs</a><ul>
+<li>JS的API文档：<a href="https://developers.google.com/earth-engine/getstarted" target="_blank" rel="noopener">https://developers.google.com/earth-engine/getstarted</a></li>
+<li>Python API地址：<a href="https://github.com/google/earthengine-api" target="_blank" rel="noopener">https://github.com/google/earthengine-api</a> </li>
+</ul>
+</li>
+<li>代码编辑器：一个使用Javascript API进行复杂空间分析的快速原型设计和可视化的IDE。 <a href="https://developers.google.com/earth-engine/playground" target="_blank" rel="noopener">https://developers.google.com/earth-engine/playground</a></li>
+</ul>
+<h1 id="GEE-入门"><a href="#GEE-入门" class="headerlink" title="GEE 入门"></a>GEE 入门</h1><h2 id="工作空间和界面"><a href="#工作空间和界面" class="headerlink" title="工作空间和界面"></a>工作空间和界面</h2><p>GUI界面：<a href="https://explorer.earthengine.google.com/#workspace，登陆后可用。" target="_blank" rel="noopener">https://explorer.earthengine.google.com/#workspace，登陆后可用。</a><br>代码界面：<a href="https://code.earthengine.google.com，这个是主要的工作界面，代码编写、结果输出及可视化显示都在这个界面。工作空间左侧Scripts（脚本）里面提供了许多共享的代码，另外" target="_blank" rel="noopener">https://code.earthengine.google.com，这个是主要的工作界面，代码编写、结果输出及可视化显示都在这个界面。工作空间左侧Scripts（脚本）里面提供了许多共享的代码，另外</a> Google Earth Engine API帮助文档也提供了许多示例代码，可以运行这些示例代码入门学习。</p>
+<h2 id="常用功能"><a href="#常用功能" class="headerlink" title="常用功能"></a>常用功能</h2><p>Google Earth Engine提供对影像和影像集的处理以及要素和要素集的处理；提供对不同时间、空间、分辨率及波段的数据进行Reduce(综合)，提供对不同要素进行Jion(关联)；Google Earth Engine包含Array(数组)对象，提供 Charts(图表)输出以及Assets(资产)管理等等。</p>
+<h3 id="查看影像信息并加载影像"><a href="#查看影像信息并加载影像" class="headerlink" title="查看影像信息并加载影像"></a>查看影像信息并加载影像</h3><h3 id="裁剪影像保存到本地"><a href="#裁剪影像保存到本地" class="headerlink" title="裁剪影像保存到本地"></a>裁剪影像保存到本地</h3><p>按照给定的坐标范围对影像进行裁剪，执行代码后，在”Tasks”任务列表中会出现该任务，单击“运行”可以将裁剪影像保存到Assets(资产)列表或者Google云盘中，Google云盘中的数据可以下载到本地。</p>
+<p>数据导出到Assets(资产)列表中，Assets列表中的数据可以直接用于运算。</p>
+<h3 id="影像-影像集在线处理"><a href="#影像-影像集在线处理" class="headerlink" title="影像/影像集在线处理"></a>影像/影像集在线处理</h3><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>海洋GISer成长记. Google Earth Engine地理计算云平台介绍及入门. <a href="https://kuaibao.qq.com/s/20180613G20Q8100?refer=spider" target="_blank" rel="noopener">https://kuaibao.qq.com/s/20180613G20Q8100?refer=spider</a>, 2018-06-13.</p>
+<p>木辰. Google Earth Engine 随笔（一）·开篇. <a href="https://zhuanlan.zhihu.com/p/51486147" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/51486147</a>, 2018-12-06.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/29/20200229-Python-Word-reading/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xiaofeng Liu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/29/20200229-Python-Word-reading/" class="post-title-link" itemprop="url">20200229 Python Word reading</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-02-29 14:07:56 / Modified: 14:11:58" itemprop="dateCreated datePublished" datetime="2020-02-29T14:07:56+08:00">2020-02-29</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>source: <a href="https://www.jianshu.com/p/146bd20c2e67" target="_blank" rel="noopener">https://www.jianshu.com/p/146bd20c2e67</a></p>
+<p>首先，在cmd中输入命令行pip install python-docx，下载安装模块python-docx：<br>image [<a href="https://upload-images.jianshu.io/upload_images/5714082-e7812a3d716d3500.png?imageMogr2/auto-orient/strip|imageView2/2/w/677/format/webp]" target="_blank" rel="noopener">https://upload-images.jianshu.io/upload_images/5714082-e7812a3d716d3500.png?imageMogr2/auto-orient/strip|imageView2/2/w/677/format/webp]</a></p>
+<p>安装成功的样子</p>
+<p>输入命令行pip install pdfminer3k安装模块：<br>安装pdfminer<br>首先我们来看看文件目录：</p>
+<p>文件目录</p>
+<p>然后开始写读取txt文本的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def readTxt():</span><br><span class="line">    # 读取txt</span><br><span class="line">    ftxt &#x3D; open(&#39;《盗墓笔记少年篇沙海》.txt&#39;) # open里的为文件路径</span><br><span class="line">    x &#x3D; ftxt.read() # x即为读取的文件内容</span><br><span class="line">    ftxt.close() # 关闭文档流</span><br><span class="line">    return x # 返回读取到的文件内容</span><br></pre></td></tr></table></figure>
+
+<p>接下来是读取word文本的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def readWord():</span><br><span class="line">    # 读取word</span><br><span class="line">    import docx # 引入python-docx模块，是的你没有看错，名字不一样</span><br><span class="line">    fword &#x3D; docx.Document(&#39;盗墓笔记.docx&#39;) # 括号内的为文件路径</span><br><span class="line">    str1 &#x3D; &#39;&#39;</span><br><span class="line">    for para in fword.paragraphs: # 读取word的每一段内容</span><br><span class="line">        str1 +&#x3D; para.text #para.text即为该段落的内容</span><br><span class="line">    return str1 # 返回读取到的文件内容</span><br></pre></td></tr></table></figure>
+
+<p>然后是读取pdf的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">def readPdf():</span><br><span class="line">    # 读取pdf</span><br><span class="line">    from pdfminer.pdfparser import PDFParser, PDFDocument</span><br><span class="line">    from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter</span><br><span class="line">    from pdfminer.converter import PDFPageAggregator</span><br><span class="line">    from pdfminer.layout import LTTextBoxHorizontal, LAParams</span><br><span class="line">    from pdfminer.pdfinterp import PDFTextExtractionNotAllowed</span><br><span class="line"></span><br><span class="line">    text_path &#x3D; r&#39;盗墓笔记.pdf&#39;</span><br><span class="line">    fpdf &#x3D; open(text_path, &#39;rb&#39;)</span><br><span class="line">    parser &#x3D; PDFParser(fpdf) # 用文件对象创建一个PDF文档分析器</span><br><span class="line">    doc &#x3D; PDFDocument() # 创建一个PDF文档</span><br><span class="line">    parser.set_document(doc) # 连接分析器与文档对象</span><br><span class="line">    doc.set_parser(parser)</span><br><span class="line"></span><br><span class="line">    doc.initialize()</span><br><span class="line">    strs &#x3D; &#39;&#39;</span><br><span class="line">    if not doc.is_extractable:</span><br><span class="line">        # 检测文档是否提供txt转换，不提供就忽略</span><br><span class="line">        raise PDFTextExtractionNotAllowed</span><br><span class="line">    else:</span><br><span class="line">        pdfMgr &#x3D; PDFResourceManager() # 创建PDF，资源管理器，来共享资源</span><br><span class="line">        laparams &#x3D; LAParams() # 创建一个PDF设备对象</span><br><span class="line">        device &#x3D; PDFPageAggregator(pdfMgr, laparams &#x3D; laparams)</span><br><span class="line">        interpreter &#x3D; PDFPageInterpreter(pdfMgr, device) # 创建一个PDF解释其对象</span><br><span class="line"></span><br><span class="line">        for page in doc.get_pages():</span><br><span class="line">            interpreter.process_page(page) # doc.get_pages() 获取page列表</span><br><span class="line">            layout &#x3D; device.get_result() # 接受该页面的LTPage对象</span><br><span class="line">            # 这里layout是一个LTPage对象 里面存放着 这个page解析出的各种对象</span><br><span class="line">            # 一般包括LTTextBox, LTFigure, LTImage, LTTextBoxHorizontal 等等</span><br><span class="line">            # 想要获取文本就获得对象的text属性，</span><br><span class="line">            for x in layout:</span><br><span class="line">                if (isinstance(x, LTTextBoxHorizontal)):</span><br><span class="line">                    strs +&#x3D; x.get_text()</span><br><span class="line">    return strs # 返回读取到的文件内容</span><br></pre></td></tr></table></figure>
+
+<p>然后使用jieba模块分词（该模块使用命令pip install jieba安装）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import jieba</span><br><span class="line">wordList &#x3D; jieba.lcut(readTxt())</span><br></pre></td></tr></table></figure>
+
+<p>词频统计的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def fluAlz(wordList):</span><br><span class="line">    # 词频统计</span><br><span class="line">    wordSet &#x3D; list(set(wordList))</span><br><span class="line">    fluence &#x3D; []</span><br><span class="line">    for x in range(len(wordSet)):</span><br><span class="line">        fluence.append([wordSet[x], wordList.count(wordSet[x])])</span><br><span class="line">    fluence &#x3D; sorted(fluence, key &#x3D; lambda flu:flu[1], reverse &#x3D; True)</span><br><span class="line">    return fluence</span><br></pre></td></tr></table></figure>
+
+<p>最后将结果写入txt文件内：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fluence &#x3D; fluAlz(wordList)</span><br><span class="line"># 将结果写入txt</span><br><span class="line">fwrite &#x3D; open(&#39;test.txt&#39;, &#39;w&#39;)</span><br><span class="line">fwrite.write(str(fluence))</span><br><span class="line">fwrite.close()</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/21/20200221-Cox-K-Political-Geography/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xiaofeng Liu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/21/20200221-Cox-K-Political-Geography/" class="post-title-link" itemprop="url">Cox K - Political Geography - Territory, state and society</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-02-21 16:12:06" itemprop="dateCreated datePublished" datetime="2020-02-21T16:12:06+08:00">2020-02-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-22 18:47:54" itemprop="dateModified" datetime="2020-02-22T18:47:54+08:00">2020-02-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic/" itemprop="url" rel="index">
+                    <span itemprop="name">Academic</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Cox, K.R., 2008. Political geography: territory, state and society. John Wiley &amp; Sons.<br>《政治地理学：领域，国家与社会》</p>
+<h1 id="Information"><a href="#Information" class="headerlink" title="Information"></a>Information</h1><p>This is a textbook written by Kevin Cox, a retired professor of Ohio State University. The book was first published in 2002 by John Wiley and Sons. The edition we read here was published in 2008.</p>
+<p>There is a Book Review by Douglas Reardon, Department of History, Geography, and Global Studies, Coppin State College, Baltimore, MD.</p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Political geography has been deemed as a loose subject. To introduce it in a more coherent way, the author proposed two guiding principles in writing this book.</p>
+<ul>
+<li>the first one is using a coherent conceptual framework comprised of the twin concepts of territory and territoriality.</li>
+<li>the second principle is adopting an approach to the critical subject: the structuring role of capitalism, the logics of capitalist development, and how they work themselves out over space.<br>With a strong emphasis on the capitalism, the book is more like a political economy book than a political geography book, though territory is also a focus.</li>
+</ul>
+<p>The book is composed of 10 chapters plus a conclusion. </p>
+<ul>
+<li>Chapter 1 introduced some basic concepts of political geography including territory and territoriality, the state, power, social process, movement and fixity. A bunch of cases are employed to demonstrate the definition and relation of these concepts. The remaining 9 chapters are divided into three parts.</li>
+<li>Part 1 includes chapter 2 to 4 with a theme on territory and political economy. The three chapters are arranged as follows. Chapter 2 provides fundamental knowledge of political economy by introducing the logic, problems and geographical features of capitalism. Chapter 3 and 4 present the politics in work place and living place respectively. With the three chapters, the author depicted the relations of competition, cooperation, and conflict between workers, employers, the state, and many other actors involved in the capitalism production process, as well as the root and logic of their actions in certain contexts. </li>
+<li>Part 2, territory and the politics of difference, is composed of chapter 5 to 7. This part tells us, the nation is a constructed and imagined community. Not only the nation is constructed, the state, the gender, and many other things are also constructed. These constructions legitimize some identities and unification while they also cause differences and divisions.</li>
+<li>Part 3 covers chapter 8 to 10 titled territory and the state. The state and capitalism are in need with each other. Faced with the uneven and injustice development, the states are struggling with minimizing regional differences and undeveloped countries are seeking for development in post colonial era. However, this is not easy. At last in chapter 10, the author discussed how the globalization affects the state and capitalism and the emergence of some new issues like environment and culture. </li>
+<li>In the conclusion, the author echos the framework and approach he proposed in the preface and chapter 1 by linking the chapters together to discuss how the dilemma of the movement and fixity of the capital and labor becomes the driver of territorialization. </li>
+</ul>
+<h1 id="Fundamental-concepts"><a href="#Fundamental-concepts" class="headerlink" title="Fundamental concepts"></a>Fundamental concepts</h1><ul>
+<li><strong>Territory</strong>: the <strong>area</strong> whose content one seeks to control in these ways.</li>
+<li><strong>Territoriality</strong>: the <strong>activity/strategy</strong> of defending, controlling, excluding, including. It is rooted in the contradiction between movement and fixity, and the tension between the state and capitalism.</li>
+<li><strong>movement and fixity</strong>:<ul>
+<li>As far as the fixed are concerned movement can be both fact and possibility. As such it can be both threatening and enabling. It can be threatening to some and enabling to others.</li>
+<li>Capitalism is accelerating the movement.<br>The results of movement: integration and disintegration.</li>
+</ul>
+</li>
+<li><strong>the state</strong>: the state is a imagined and constructed community, where people share common experience.</li>
+<li><strong>capitalism</strong>: commodify resources (including labor) through the production process.</li>
+<li><strong>(state/social) power</strong>:  the power of money, the power of the normative.Territorial strategies are exercises of power.</li>
+<li><strong>social process</strong>: multiple aspects – material and ideal, individual and social, cultural, political and spatial.</li>
+</ul>
+<h1 id="Capitalist-Development"><a href="#Capitalist-Development" class="headerlink" title="Capitalist Development"></a>Capitalist Development</h1><p>Capitalism is the most important engine of world development with an aim to improve productivity. However, it also leads to competition and conflicts.</p>
+<h2 id="production-force-increase"><a href="#production-force-increase" class="headerlink" title="production force increase"></a>production force increase</h2><ul>
+<li>key determinants of productivity: labor skills, tools, objectives.</li>
+<li>other factors: labor salary, social rules to access properties, specialized production and division of labor.</li>
+</ul>
+<h2 id="competition"><a href="#competition" class="headerlink" title="competition"></a>competition</h2><ul>
+<li>strategies of capitalists: Cheapening the product, Developing the product;</li>
+<li>strategies of workers: Lower their wage, making their labor power more scarce by developing it in the direction of skills in short supply, shift from one geographic location to another or from one sector of the economy to another.</li>
+</ul>
+<h2 id="social-amp-environmental-by-products"><a href="#social-amp-environmental-by-products" class="headerlink" title="social &amp; environmental by-products"></a>social &amp; environmental by-products</h2><ul>
+<li><p>social tensions</p>
+<ul>
+<li>insecurity: the employment is not stable</li>
+<li>insufficiency: workers need salary to consume</li>
+<li>insignificance: workers need the sense of significance, respect, and dignity</li>
+<li>conflicts between labor social and technical divisions: party competition</li>
+</ul>
+</li>
+<li><p>environmental problems</p>
+<ul>
+<li>reason: huge need in resources and energy, capital tends to externalize cost.</li>
+<li>solution: incentive framework to develop substitute energy and recycling technology, specification of property rights.</li>
+<li>difficulties: international cooperation, population and consumption increase</li>
+</ul>
+</li>
+</ul>
+<h1 id="Movement-and-fixity-of-capitalism"><a href="#Movement-and-fixity-of-capitalism" class="headerlink" title="Movement and fixity of capitalism"></a>Movement and fixity of capitalism</h1><ul>
+<li>The geographical distribution of capital is uneven; there is usually agglomeration. Firms are trapped into the space: large facilities are hard to move; they need stable social networks to operate.</li>
+</ul>
+<h1 id="The-role-of-the-state"><a href="#The-role-of-the-state" class="headerlink" title="The role of the state"></a>The role of the state</h1><p>The state is in intimate relationship with the capitalism. The state is an important participant of capitalism and it also promotes capitalism development. In turn, the insecurity of capitalism contributes to the formation of the identity of a state.</p>
+<p>The state is faced with competition with other states and needs to deal with the tension and uneven development within its boundary.</p>
+<ul>
+<li>national growth alliance: free trade zone, technology strategy, financial incentives.</li>
+<li>help the underdeveloped places attract investment, big city growth control</li>
+<li>regulate labor-employer relationship: existing wage law， immigration law， education， unemployment compensation, ```</li>
+</ul>
+<p>The territorial structure of state is diversified. Central and local states </p>
+<h1 id="Globalization"><a href="#Globalization" class="headerlink" title="Globalization"></a>Globalization</h1>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/09/20200209-Learning-and-Teaching/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xiaofeng Liu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/09/20200209-Learning-and-Teaching/" class="post-title-link" itemprop="url">20200209 Learning and Teaching</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-02-09 17:13:22 / Modified: 17:14:48" itemprop="dateCreated datePublished" datetime="2020-02-09T17:13:22+08:00">2020-02-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Learning</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>References<br>Morss, Kate, and Rowena Murray. Teaching at University : A Guide for Postgraduates and Researchers, SAGE Publications, 2005. ProQuest Ebook Central, <a href="http://ebookcentral.proquest.com/lib/hkuhk/detail.action?docID=334556" target="_blank" rel="noopener">http://ebookcentral.proquest.com/lib/hkuhk/detail.action?docID=334556</a>.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/11/20200111-build-a-blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -204,10 +685,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-01-11 12:06:21 / Modified: 16:20:56" itemprop="dateCreated datePublished" datetime="2020-01-11T12:06:21+08:00">2020-01-11</time>
+              <time title="Created: 2020-01-11 12:06:21" itemprop="dateCreated datePublished" datetime="2020-01-11T12:06:21+08:00">2020-01-11</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-01-14 20:24:27" itemprop="dateModified" datetime="2020-01-14T20:24:27+08:00">2020-01-14</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -463,20 +950,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
