@@ -46,18 +46,19 @@
   };
 </script>
 
-  <meta name="description" content="IntroductionThis article will help you to get a free personal blog using Github + Hexo on Windows 10, even you did not know these two tools before.">
+  <meta name="description" content="IntroductionThis article will help you to build a free personal blog using Github + Hexo on Windows 10.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to build a free personal blog using Github + Hexo">
 <meta property="og:url" content="http://yoursite.com/2020/01/11/20200111-build-a-blog/index.html">
 <meta property="og:site_name" content="Xiaofeng Liu">
-<meta property="og:description" content="IntroductionThis article will help you to get a free personal blog using Github + Hexo on Windows 10, even you did not know these two tools before.">
+<meta property="og:description" content="IntroductionThis article will help you to build a free personal blog using Github + Hexo on Windows 10.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-01-11T04:06:21.000Z">
-<meta property="article:modified_time" content="2020-01-14T12:24:27.436Z">
+<meta property="article:modified_time" content="2020-10-09T02:22:23.437Z">
 <meta property="article:author" content="Xiaofeng Liu">
 <meta property="article:tag" content="Github">
 <meta property="article:tag" content="Skill">
+<meta property="article:tag" content="EnglishArticle">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/01/11/20200111-build-a-blog/">
@@ -217,7 +218,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-14 20:24:27" itemprop="dateModified" datetime="2020-01-14T20:24:27+08:00">2020-01-14</time>
+                <time title="Modified: 2020-10-09 10:22:23" itemprop="dateModified" datetime="2020-10-09T10:22:23+08:00">2020-10-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -242,7 +243,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>This article will help you to get a free personal blog using <code>Github + Hexo</code> on Windows 10, even you did not know these two tools before.</p>
+        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>This article will help you to build a free personal blog using <code>Github + Hexo</code> on Windows 10.</p>
 <a id="more"></a>
 
 <h1 id="Table-of-Content"><a href="#Table-of-Content" class="headerlink" title="Table of Content"></a>Table of Content</h1><ul>
@@ -281,10 +282,10 @@
 <blockquote>
 <p>Hexo is a fast, simple &amp; powerful blog framework based on Node.js, which can generates static files with a beautiful theme from your writen posts in Markdown (or other markup languages) in seconds.</p>
 </blockquote>
-<h2 id="Github-Hexo"><a href="#Github-Hexo" class="headerlink" title="Github + Hexo"></a>Github + Hexo</h2><p>After setting up the environment, you can write articles on your personal computer in Markdown, then generate html websites and post on your blog.</p>
+<h2 id="Github-Hexo"><a href="#Github-Hexo" class="headerlink" title="Github + Hexo"></a>Github + Hexo</h2><p>After setting up the environment, you can write articles on your personal computer in Markdown, then generate html websites and post them on your blog.</p>
 <ul>
 <li>Pros: It is totally free, static and fast. You can modify the pages, including theme and content, as you like. It wll be stored on Github safely. It is easy to transfer.</li>
-<li>Cons: It is dependent on local environment and mainly suits individual blogs. You need to generate web pages every time you make changes. Access to Github is needed.</li>
+<li>Cons: It is dependent on local environment and mainly suits individual blogs. You need to generate web pages every time you make changes. Access to Github is required.</li>
 </ul>
 <h1 id="Environment-setting"><a href="#Environment-setting" class="headerlink" title="Environment setting"></a>Environment setting</h1><h2 id="Install-Node-js-and-Git"><a href="#Install-Node-js-and-Git" class="headerlink" title="Install Node.js and Git"></a>Install Node.js and Git</h2><ol>
 <li>Download the packages:</li>
@@ -296,23 +297,23 @@
 <ol start="2">
 <li><p>Continue to click “Next” button to select the default settings when installing the two packages.</p>
 </li>
-<li><p>After the installation, press “Win + R”, input “cmd” to open command window, input <code>node -v</code>, <code>npm -v</code>, and <code>git --version</code> separately. If versions are given, the environment has been successfully setted.</p>
+<li><p>After installation, press “Win + R”, input “cmd” to open command window, input <code>node -v</code>, <code>npm -v</code>, and <code>git --version</code> separately. If versions are given, the environment has been successfully setted.</p>
 </li>
 </ol>
-<p>Now you can use <strong>Git Bash</strong> function to substitute cmd when you need to run command lines under certain folder path (just right click and select “Git Bash” in the folder).</p>
+<p>Now you can use <strong>Git Bash</strong> function to substitute cmd when you need to run command lines under certain folder path (just right click and select “Git Bash Here” in the folder).</p>
 <h2 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h2><ol>
-<li><p>Before install Hexo, you are advised to <strong>create a new folder</strong> to store all the files that will be created for the blog and name it, such as “Blog”.</p>
+<li><p>Before installing Hexo, you are advised to <strong>create a new folder</strong> to store all the files that will be created for the blog and give it a name, such as “Blog”.</p>
 </li>
-<li><p>Right click to lauch Git Bash under the folder “Blog”. Input <code>npm install -g hexo-cli</code> to install Hexo.</p>
+<li><p>Right click to lauch Git Bash under the folder “Blog”. Run <code>npm install -g hexo-cli</code> to install Hexo.</p>
 </li>
-<li><p>After the installation, input <code>hexo -v</code> to see if the installation is successful. If the version is given, it is successfully installed.</p>
+<li><p>After installation, run <code>hexo -v</code>. If the version is given, it is successfully installed.</p>
 </li>
 </ol>
 <p>From now on, all the commond lines for the blog are supposed to run <strong>under the “Blog” folder</strong> or its child folders.</p>
 <h2 id="Initiate-local-webpage"><a href="#Initiate-local-webpage" class="headerlink" title="Initiate local webpage"></a>Initiate local webpage</h2><ol>
-<li>Open Git Bash, input and run <code>hexo init</code> to initiate the “Blog” folder. Then input and run <code>npm install</code> to install components.</li>
-<li>Input and run <code>hexo g</code> to generate a static webpage.</li>
-<li>Input and run <code>hexo s</code> , then you can get a link <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>. Paste the link into your Web Browser, then you can see your local blog page in a default Hexo style. You can close the local server by press “Ctrl + C”.</li>
+<li>Open Git Bash, run <code>hexo init</code> to initiate the “Blog” folder. Then run <code>npm install</code> to install components.</li>
+<li>Run <code>hexo g</code> to generate a static webpage.</li>
+<li>Run <code>hexo s</code> , then you can get a local link <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>. Paste the link into your Web Browser, and you can see your local blog page in a default Hexo style. You can close the local server by press “Ctrl + C”.</li>
 </ol>
 <p>Now you get a local blog on your personal computer, but it has not been online yet. Under the “Blog” folder, now you can find several newly-created files:</p>
 <ul>
@@ -331,29 +332,29 @@
 </ol>
 <h2 id="Set-up-SSH"><a href="#Set-up-SSH" class="headerlink" title="Set up SSH"></a>Set up SSH</h2><p>By setting up SSH, you will be able to connect your local webpage with your github account via git.</p>
 <ol>
-<li>Open Git Bash, input and run <code>git config --global user.name &quot;your GitHub username&quot;</code>, and <code>git config --global user.email &quot;your GitHub email&quot;</code>.</li>
-<li>Input and run <code>ssh-keygen -t rsa -C &quot;your GitHub email&quot;</code> to create SSH key.</li>
-<li>Enter into the folder [C:\Users\用户名.ssh], open the “id_rsa.pub” file using Notebook. Use “Ctrl + A” and “Ctrl + C” to select and copy all the content in the file.</li>
+<li>Open Git Bash, run <code>git config --global user.name &quot;your GitHub username&quot;</code>, and <code>git config --global user.email &quot;your GitHub email&quot;</code>.</li>
+<li>Run <code>ssh-keygen -t rsa -C &quot;your GitHub email&quot;</code> to create SSH key.</li>
+<li>Enter into the folder [C:\Users\user_name.ssh], open the “id_rsa.pub” file using Notebook. Use “Ctrl + A” and “Ctrl + C” to select and copy all the content in the file.</li>
 <li>Log in your github account, and enter into the setting page. Click into the “SSH and GPG keys” page, Click “New SSH key” button, paste the content you copied from “id_rsa.pub” file. Click the “Add SSH key” and you can see a SSH key is created.</li>
-<li>Go back to the Git Bash, input and run <code>ssh -T git@github.com</code>. If it asks “Are you sure you want to continue connecting?”, input yes and press “Enter”. The connection is successful it says “Hi <em>username</em>! You’ve successfully ```”.</li>
+<li>Go back to the Git Bash, input and run <code>ssh -T git@github.com</code>. If it asks “Are you sure you want to continue connecting?”, input yes and press “Enter”. The connection is successful if it says “Hi <em>username</em>! You’ve successfully ```”.</li>
 </ol>
 <h2 id="Deploy-hexo-on-Github"><a href="#Deploy-hexo-on-Github" class="headerlink" title="Deploy hexo on Github"></a>Deploy hexo on Github</h2><p>Now we can connnect our local blog page with Github, namely deploy the articles generated by hexo on Github.</p>
 <ol>
 <li>Open the “_config.yml” file under the “Blog” folder using Notebook. Drag the scroll to the last few lines and change them as the following:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: &#39;git&#39;</span><br><span class="line">  repo: git@github.com:username&#x2F;username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></li>
-<li>Install deploy-git by running <code>npm install hexo-deployer-git --save</code>. Only using the deploy command can you publish your blog on the github.</li>
+<li>Install deploy-git by running <code>npm install hexo-deployer-git --save</code>. Only using the deploy command can you publish your blog on github.</li>
 <li>Now you can call the deploy command:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo c    &#x2F;&#x2F;clean previous content</span><br><span class="line">hexo g    &#x2F;&#x2F;generate static article pages</span><br><span class="line">hexo d    &#x2F;&#x2F;deploy the pages</span><br></pre></td></tr></table></figure></li>
-<li>Now open your online blog page <em>username</em>.github.io/, and you can see your local blog page has already been published online. (There might be a time delay)</li>
+<li>Now open your online blog page <em>username</em>.github.io/, and you can see your local blog page has already been published online. (There might be a delay)</li>
 <li>If you want to change the title or other basic settings of the blog, open the “_config.yml” file under the “Blog” folder and then you can change the title, author name and other things.</li>
 </ol>
-<h1 id="Create-and-publish-new-articles"><a href="#Create-and-publish-new-articles" class="headerlink" title="Create and publish new articles"></a>Create and publish new articles</h1><p>All the articles will be stored under the folder “Blog\source_posts” in Markdown.</p>
+<h1 id="Create-and-publish-new-articles"><a href="#Create-and-publish-new-articles" class="headerlink" title="Create and publish new articles"></a>Create and publish new articles</h1><p>All articles will be stored under the folder “Blog\source_posts” in Markdown format.</p>
 <ol>
 <li>Open Git Bash under the “Blog” folder, install an extension by running <code>npm i hexo-deployer-git</code>;</li>
-<li>Input and run <code>hexo new &quot;title&quot;</code>, then you can find a newly created Markdown file under “Blog\source_posts” folder named “title.md”.</li>
-<li>Open “title.md” with a Markdown ediing software and write your article here.</li>
-<li>Publish the new article by running <code>hexo g</code> and <code>hexo d</code>. Every time you create a new article, you need to run these two lines to publish your new contents.</li>
+<li>Run <code>hexo new &quot;title&quot;</code>, then you can find a newly created Markdown file under “Blog\source_posts” folder named “title.md”.</li>
+<li>Open “title.md” with a Markdown editing software and write your article.</li>
+<li>Publish the new article by running <code>hexo g</code> and <code>hexo d</code>. Every time you create a new article, you need to run these two lines to get it published online.</li>
 </ol>
 <p>Basic markdown syntax: <a href="https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax" target="_blank" rel="noopener">https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax</a></p>
-<h1 id="Theme-settings"><a href="#Theme-settings" class="headerlink" title="Theme settings"></a>Theme settings</h1><h2 id="Change-the-theme"><a href="#Change-the-theme" class="headerlink" title="Change the theme"></a>Change the theme</h2><p>You probably do not like the default Hexo page style, of which the theme is “landscape”. There are acctually more choices and you can find them <a href="https://hexo.io/themes/" target="_blank" rel="noopener">here</a>. Now you should know how to change your blog theme into the one you like.</p>
+<h1 id="Theme-settings"><a href="#Theme-settings" class="headerlink" title="Theme settings"></a>Theme settings</h1><h2 id="Change-the-theme"><a href="#Change-the-theme" class="headerlink" title="Change the theme"></a>Change the theme</h2><p>You probably do not like the default Hexo page style, of which the theme is “landscape”. There are acctually more choices and you can find them <a href="https://hexo.io/themes/" target="_blank" rel="noopener">here</a>. Here is the way to change your blog theme into the one you like.</p>
 <ol>
 <li>Find the theme you like in the website and click into its github pag. Here we take the “Next” theme as an example, whose github page is <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a>.</li>
 <li>Clone the theme to your “themes” folder by running<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure></li>
@@ -362,15 +363,16 @@
 <h2 id=""><a href="#" class="headerlink" title=""></a></h2><p><a href="https://zhuanlan.zhihu.com/p/30836436" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/30836436</a></p>
 <h1 id="Custome-settings"><a href="#Custome-settings" class="headerlink" title="Custome settings"></a>Custome settings</h1><h2 id="Change-the-domain-name"><a href="#Change-the-domain-name" class="headerlink" title="Change the domain name"></a>Change the domain name</h2><p>If you do not like “github.io” suffix of your blog and want to change it to a personal domain name, you need to buy one first from <a href="https://www.namesilo.com/pricing.php?rid=d27fa32do" target="_blank" rel="noopener">namesilo</a>, <a href="https://cloud.tencent.com/act/domainsales?fromSource=gwzcw.1312102.1312102.1312102&gclid=Cj0KCQiAgebwBRDnARIsAE3eZjQbcgCQ2XoEQxeOOUU34cANww_SR8MBtbN4sJxQYLGXmRNFpm-ByVYaAi73EALw_wcB" target="_blank" rel="noopener">Tecent</a> or other suppliers.</p>
 <ol>
-<li>Open the “Blog\source” folder, create a file named “CNAME” without suffix, open it wiht Notebook and write your own domain name into it and save.</li>
-<li>Run <code>hexo g</code> and <code>hexo d</code> to deploy it to your blog.</li>
+<li>Open the “Blog\source” folder, create a file named “CNAME” without suffix, open it with Notebook, write down your own domain name and save it.</li>
+<li>Run <code>hexo g</code> and <code>hexo d</code> to generate and deploy it to your blog.</li>
 <li>Now you can visit your blog with your own domain name.</li>
 </ol>
-<h2 id="Article-display-in-the-lists"><a href="#Article-display-in-the-lists" class="headerlink" title="Article display in the lists"></a>Article display in the lists</h2><p>The default display mode is display the whole texts, which reduces it readability when the articles are long. In this case, you can add a <code>&lt;!--more--&gt;</code> in appropriate location in the article. By doing this, only the contents before this code will be displayed as an abstract and the remaining will be hide with a “Read more” button.</p>
+<h2 id="Article-display-in-the-lists"><a href="#Article-display-in-the-lists" class="headerlink" title="Article display in the lists"></a>Article display in the lists</h2><p>The default display mode is displaying the whole texts of the article, which reduces its readability. In this case, you can add a <code>&lt;!--more--&gt;</code> at a appropriate location to only display the paragraphs before this code and hide the remaining with a “Read more” button.</p>
 <h2 id="Change-article-templates"><a href="#Change-article-templates" class="headerlink" title="Change article templates"></a>Change article templates</h2><p>You can change the template by modifying the file “Blog/scaffolds/post.md”</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;             #  文章标题，强烈建议填写此选项</span><br><span class="line">date: &#123;&#123; date &#125;&#125;               #  发布时间，强烈建议填写此选项，且最好保证全局唯一</span><br><span class="line">author: Qin Nian               #  文章作者</span><br><span class="line">img: &#x2F;source&#x2F;images&#x2F;xxx.jpg    #  文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.</span><br><span class="line">coverImg:                      #  表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</span><br><span class="line">top: true                      #  推荐文章（文章是否置顶），如果 top 值为 true，则会作为首页推荐文章</span><br><span class="line">toc: true                      #  是否开启 TOC，需在主题的 _config.yml 中激活了 toc 选项</span><br><span class="line">cover: false                   #  表示该文章是否需要加入到首页轮播封面中</span><br><span class="line">mathjax: false                 #  是否开启数学公式支持,需在主题的 _config.yml 中激活</span><br><span class="line">password: 文章阅读密码          #  SHA256 加密。需在主题的 config.yml 中激活 verifyPassword</span><br><span class="line">summary:                       #  文章摘要，自定义的文章摘要内容</span><br><span class="line">categories:                    #  文章分类，建议一篇文章一个分类</span><br><span class="line">tags:                          #  文章标签，一篇文章可以多个标签</span><br><span class="line">    - Markdown</span><br><span class="line">    - Typora</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
-<h2 id="Add-pages"><a href="#Add-pages" class="headerlink" title="Add pages"></a>Add pages</h2>
+<h2 id="Add-pages"><a href="#Add-pages" class="headerlink" title="Add pages"></a>Add pages</h2><p>– to be continued –</p>
+
     </div>
 
     
@@ -381,6 +383,7 @@
           <div class="post-tags">
               <a href="/tags/Github/" rel="tag"># Github</a>
               <a href="/tags/Skill/" rel="tag"># Skill</a>
+              <a href="/tags/EnglishArticle/" rel="tag"># EnglishArticle</a>
           </div>
 
         
@@ -482,7 +485,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
